@@ -1,0 +1,32 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Disable directory listing
+Options -Indexes
+
+# Set the directory index file
+DirectoryIndex src/php/index.php
+
+# Internal redirect for root access to index.php in the src/php directory
+RewriteCond %{HTTP_HOST} ^localhost:8888$ [NC]
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^index.php [L]
+
+# Custom error pages (optional)
+ErrorDocument 404 /Database/error/404.html
+ErrorDocument 500 /Database/error/500.html
+ErrorDocument 403 /Database/error/403.html
+
+# Pretty URLs (remove .php extension)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [L,QSA]
+
+# Deny access to .htaccess itself for security reasons
+<Files .htaccess>
+Order Allow,Deny
+Deny from all
+</Files>
+
+# Disable directory browsing
+Options -Indexes

@@ -5,7 +5,7 @@ RewriteEngine On
 Options -Indexes
 
 # Set the directory index file
-DirectoryIndex src/php/index.php
+DirectoryIndex ./index.php
 
 # Internal redirect for root access to index.php in the src/php directory
 RewriteCond %{HTTP_HOST} ^localhost:8888$ [NC]

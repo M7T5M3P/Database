@@ -2,6 +2,7 @@
     // Load the login.ini file, where all the paths, passwords, and usernames are stored (secret file)
     $path = parse_ini_file("../login.ini");
 ?>
+<!-- The 404 Not Found error page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

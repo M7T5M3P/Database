@@ -64,6 +64,6 @@
     </div>
 </body>
 <footer>
-    <p>Created by: <a href="">Mathys Thévenot (6722878283)</a>, <a href="">Best</a></p>
+    <p>Created by: <a href="">Mathys Thévenot (6722878283)</a>, <a href="">Dhanabhat Lertarpakul (6522770625)</a></p>
 </footer>
 </html>
